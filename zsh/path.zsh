@@ -18,7 +18,6 @@ setopt INC_APPEND_HISTORY # adds history incrementally
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
 
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export OH_MY_ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="kphoen"
