@@ -22,3 +22,5 @@ function py3() {
 }
 
 export JAVA_HOME=`/usr/libexec/java_home`
+
+eval "$(pyenv init -)"
