@@ -119,7 +119,7 @@ then
     brew install grc coreutils spark
   fi
   #Install macSpoof
-  easy_install SpoofMAC
+  #easy_install SpoofMAC
 fi
 
 echo 'Setting up oh-my-zsh'
