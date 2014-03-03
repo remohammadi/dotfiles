@@ -25,8 +25,8 @@ export ZSH_THEME="kphoen"
 
 export EDITOR='vim'
 
-export HADOOP_HOME=/Users/ankushagarwal/hadoop/hadoop-0.20/hadoop-0.20/hadoop-0.20
-export HBASE_HOME=~/hadoop/hbase-0.20/hbase-0.20
+export HADOOP_HOME=$HOME/hadoop/hadoop-0.20/hadoop-0.20/hadoop-0.20
+export HBASE_HOME=$HOME/hadoop/hbase-0.20/hbase-0.20
 export GIT_EDITOR=vim
 
 export amazon_pc="54.215.16.177"
@@ -40,4 +40,3 @@ unsetopt correct
 unsetopt correct_all
 setopt auto_cd
 setopt BASH_AUTO_LIST
-
