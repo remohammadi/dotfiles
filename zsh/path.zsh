@@ -1,5 +1,5 @@
 #Set PATH here
-export PATH=$HOME/.rvm/bin:/usr/local/bin:/usr/X11/bin:$HOME/git/repo/rrepo:$HOME/code/scripts:$HOME/.dotfiles/bin:$PATH
+export PATH=$HOME/.rvm/bin:/usr/local/bin:/usr/X11/bin:$HOME/git/repo/rrepo:$HOME/code/scripts:$HOME/.dotfiles/bin:$PATH:/opt/local/bin:/opt/local/sbin
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 
