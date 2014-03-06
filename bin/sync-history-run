@@ -1,3 +1,4 @@
 #!/bin/bash
+# Crontab expression : */10 * * * * /Users/ankushagarwal/.dotfiles/bin/sync-history-run
 t=`date +%s`
 $HOME/.dotfiles/bin/sync-history &> /tmp/sync_history_log${t}
