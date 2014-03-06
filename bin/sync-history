@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#Schedule a cronjob every 30 minutes to synchronize these guys
+# */30 * * * * $HOME/.dotfiles/bin/sync-history-run
+set -x
+set -e
+
+t=`date +%s`
+export hist_local_repo="$HOME/.dotfiles/history"
+export hist_file_local="$HOME/.dotfiles/history/history_local"
+export hist_file_remote="$HOME/.dotfiles/history/history_remote"
+export hist_file_local_clean="$HOME/.dotfiles/history/history_local_clean"
+export hist_file_remote_clean="$HOME/.dotfiles/history/history_remote_clean"
+export hist_file_new="$HOME/.dotfiles/history/history_local_new"
+export bitbucket_repo="git@bitbucket.org:ankushagarwal11/history.git"
+
+cd "$HOME/.dotfiles/history"
+
+touch $hist_file_local $hist_file_remote
+
+cat $hist_file_remote | sed -E 's/^\:\ [0-9]+:[0-9];//g' > $hist_file_remote_clean
+cat $hist_file_local | sed -E 's/^\:\ [0-9]+:[0-9];//g' > $hist_file_local_clean
+
+cat $hist_file_remote_clean $hist_file_local_clean | nl | sort -k 2 | uniq -f 1 | sort -n | cut -f 2 > $hist_file_new
+
+cp $hist_file_new $hist_file_local
+cp $hist_file_new $hist_file_remote
+
+rm -f $hist_file_local_clean $hist_file_remote_clean $hist_file_new
+
+git add $hist_file_local $hist_file_remote
+
+git commit -m "Commit at `date`"
+
+git push origin
+
+exit 0

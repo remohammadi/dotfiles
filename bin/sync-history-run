@@ -1,0 +1,3 @@
+#!/bin/bash
+t=`date +%s`
+$HOME/.dotfiles/bin/sync-history &> /tmp/sync_history_log${t}
