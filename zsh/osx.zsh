@@ -11,7 +11,7 @@ fi
 
 
 #Python 2 and Python 3
-function py2() {  
+function py2() {
   export PATH="/usr/local/bin/":${PATH}
   alias python="/usr/local/bin/python"
 }
@@ -24,3 +24,5 @@ function py3() {
 export JAVA_HOME=`/usr/libexec/java_home`
 
 eval "$(pyenv init -)"
+
+alias updatedb="/usr/libexec/locate.updatedb"
