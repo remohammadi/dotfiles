@@ -1,4 +1,4 @@
 zsh/local.zsh
 git/gitconfig.symlink
 history/.git/
-history/history
+history/history*
