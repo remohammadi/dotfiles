@@ -1,0 +1,41 @@
+#!/bin/bash
+# This program is used to resize images. It takes one argument : The directory in which jpeg files are present
+#+ It resizes all the images in that directory to another directory named ${directory}_resize
+
+if ! which convert &> /dev/null; then
+  echo "Install convert from imageMagick"
+  exit 1
+fi
+
+folder="$1"
+if [ ! -d "$folder" ]; then
+  echo "Usage : `basename $0` <directory_name>"
+  echo "It resizes all jpeg images in this directory"
+  exit 1
+fi
+
+echo -n "Enter the new max dimension : (default : 1800) "
+read size
+if [ -z $size ]; then
+  size=1800
+fi
+if [[ $size != [0-9]* ]]; then
+  echo "Invalid size"
+  exit 1
+fi
+
+# Location of the imageMagick convert command
+convert="/usr/local/bin/convert"
+newsize="${size}x${size}"
+cd $folder
+folder="`pwd`"
+newfolder="${folder}_resize"
+mkdir -p ${newfolder}
+
+for image_file in *{JPEG,JPG,jpg,jpeg}
+do
+  if [ -f "$image_file" ]; then
+    $convert $image_file -adaptive-resize $newsize $newfolder/$image_file
+    echo "Converted $image_file"
+  fi
+done
