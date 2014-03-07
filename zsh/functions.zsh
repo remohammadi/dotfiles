@@ -67,3 +67,14 @@ function tarr() {
     tar cvfz $1.tar.gz $1
   fi
 }
+
+
+function pg() {
+  if [[ -z $1 ]]; then
+    echo "pg process_name"
+  else
+    ps axu | grep -i "$1" | grep -v grep
+  fi
+}
+
+
