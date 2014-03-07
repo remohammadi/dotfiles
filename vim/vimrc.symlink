@@ -6,4 +6,7 @@ filetype indent plugin on
 set backspace=2         " backspace in insert mode works like normal editor
 set autoindent          " auto indenting
 set number              " line numbers
-
+syntax enable
+set ignorecase
+set smartcase
+set hlsearch
