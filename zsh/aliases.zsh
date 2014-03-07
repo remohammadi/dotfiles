@@ -17,6 +17,7 @@ alias lh='ls -ld .??*'
 alias ld="ls -l | egrep '^d'"
 
 alias s="subl ."
+alias a="atom"
 alias dotfiles="atom  ~/.dotfiles"
 
 
