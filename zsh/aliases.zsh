@@ -17,7 +17,7 @@ alias lh='ls -ld .??*'
 alias ld="ls -l | egrep '^d'"
 
 alias s="subl ."
-alias dotfiles="subl ~/.dotfiles"
+alias dotfiles="atom  ~/.dotfiles"
 
 
 # Pipe my public key to my clipboard.
