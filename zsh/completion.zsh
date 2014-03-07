@@ -15,9 +15,6 @@ else
 $ '
 fi
 
-#rvm related stuff
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # Set these nice options at last
 set +o extended_history
 set +o histignorespace
