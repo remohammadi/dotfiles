@@ -17,9 +17,7 @@ fi
 
 # Set RVM paths and load it as a function
 #Add to $PATH
-echo "PATH now is $PATH"
 PATH=$HOME/.rvm/bin:$PATH
-echo "PATH now is $PATH"
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
