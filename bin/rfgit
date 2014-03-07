@@ -1,0 +1,13 @@
+#!/bin/bash
+# Simple script which goes through all git repos
+# under ~/git and set's my work email in the config
+# there. All other repos use my personal email
+
+cd ~/git
+curr_dir=`pwd`
+for dir in `find $curr_dir -type d -iname '.git'`; do
+  cd $dir
+  cd ..
+  git config --local user.email "ankushagarwal@rocketfuel.com"
+  echo "Completed `pwd`"
+done
