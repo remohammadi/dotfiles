@@ -12,8 +12,6 @@ export ZSH_THEME="kphoen"
 
 export EDITOR='vim'
 
-export HADOOP_HOME=$HOME/hadoop/hadoop-0.20/hadoop-0.20/hadoop-0.20
-export HBASE_HOME=$HOME/hadoop/hbase-0.20/hbase-0.20
 export GIT_EDITOR=vim
 
 export amazon_pc="54.215.16.177"
