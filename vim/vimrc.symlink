@@ -2,3 +2,8 @@ syntax on
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+set backspace=2         " backspace in insert mode works like normal editor
+set autoindent          " auto indenting
+set number              " line numbers
+
