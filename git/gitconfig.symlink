@@ -1,0 +1,57 @@
+[user]
+        name = Ankush Agarwal
+        email = ankushagarwal11@gmail.com
+[credential]
+        helper = osxkeychain
+[alias]
+        promote = !$ZSH/bin/git-promote
+        wtf     = !$ZSH/bin/git-wtf
+        rank-contributors = !$ZSH/bin/git-rank-contributors
+        count   = !git shortlog -sn
+        co = checkout
+        c = commit
+        st = status
+        br = branch
+        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+        h = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+        type = cat-file -t
+        dump = cat-file -p
+        d = diff --ignore-space-at-eol -b -w
+
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red
+        new = green
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan
+
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[core]
+	excludesfile = /Users/ankushagarwal/.gitignore
+        editor = vim
+[push]
+        default = matching
+
+
+[apply]
+        whitespace = nowarn
+[help]
+        autocorrect = 1
