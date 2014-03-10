@@ -7,7 +7,7 @@ if [[ !  "$SHELL" =~ .*zsh ]]; then
   sudo chsh -s /bin/zsh $USER
 fi
 
-DOTFILES_ROOT="`pwd`"
+DOTFILES_ROOT="$HOME/.dotfiles"
 
 set -e
 
