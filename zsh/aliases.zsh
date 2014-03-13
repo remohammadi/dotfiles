@@ -26,4 +26,4 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 
 alias tial='tail'
 
-alias aws='54.215.16.177'
+alias aws='ssh 54.215.16.177'
