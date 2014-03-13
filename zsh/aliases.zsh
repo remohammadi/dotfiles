@@ -25,3 +25,5 @@ alias dotfiles="atom  ~/.dotfiles"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
 alias tial='tail'
+
+alias aws='54.215.16.177'
