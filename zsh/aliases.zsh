@@ -28,3 +28,5 @@ alias tial='tail'
 
 alias aws='ssh 54.215.16.177'
 alias ankush='ssh ankush.io'
+
+alias icurl='curl -I'
