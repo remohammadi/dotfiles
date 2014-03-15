@@ -27,3 +27,4 @@ match EndOfLineSpace / \+$/
 autocmd InsertEnter * hi link EndOfLineSpace Normal
 autocmd InsertLeave * hi link EndOfLineSpace ErrorMsg
 
+:set mouse=a " Use the mouse sometimes
