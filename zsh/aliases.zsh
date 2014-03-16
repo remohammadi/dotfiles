@@ -32,3 +32,5 @@ alias ankush='ssh ankush.io'
 alias icurl='curl -I'
 alias v="vim"
 alias vi="vim"
+
+alias update_site="ssh -t ankush.io 'sudo -su apache /usr/local/bin/scripts/update_site.sh'"
