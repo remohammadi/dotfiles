@@ -28,3 +28,28 @@ autocmd InsertEnter * hi link EndOfLineSpace Normal
 autocmd InsertLeave * hi link EndOfLineSpace ErrorMsg
 
 :set mouse=a " Use the mouse sometimes
+
+set clipboard=unnamed
+" Copy and paste stuff around
+nmap <Leader><v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+imap <Leader><v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nmap <Leader><Leader> :.w !pbcopy<CR><CR>
+vmap <Leader><Leader> :w !pbcopy<CR><CR>
+
+noremap  y "*y
+noremap  Y "*Y
+noremap  p "*p
+noremap  P "*P
+vnoremap y "*y
+vnoremap Y "*Y
+vnoremap p "*p
+vnoremap P "*P
+
+
+autocmd FileType c,cpp,java,scala let b:comment_leader = '//'
+autocmd FileType sh,ruby,python   let b:comment_leader = '#'
+autocmd FileType conf,fstab       let b:comment_leader = '#'
+autocmd FileType vim              let b:comment_leader = '" '
+noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
