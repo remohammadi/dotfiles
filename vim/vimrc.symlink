@@ -36,16 +36,6 @@ imap <Leader><v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nmap <Leader><Leader> :.w !pbcopy<CR><CR>
 vmap <Leader><Leader> :w !pbcopy<CR><CR>
 
-noremap  y "*y
-noremap  Y "*Y
-noremap  p "*p
-noremap  P "*P
-vnoremap y "*y
-vnoremap Y "*Y
-vnoremap p "*p
-vnoremap P "*P
-
-
 autocmd FileType c,cpp,java,scala let b:comment_leader = '//'
 autocmd FileType sh,ruby,python   let b:comment_leader = '#'
 autocmd FileType conf,fstab       let b:comment_leader = '#'
