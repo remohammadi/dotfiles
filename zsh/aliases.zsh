@@ -33,4 +33,4 @@ alias icurl='curl -I'
 alias v="vim"
 alias vi="vim"
 
-alias update_site="ssh -t ankush.io 'sudo -su apache /usr/local/bin/scripts/update_site.sh'"
+alias puppetnow="ssh -t ankush.io 'cd /var/vagrant; sudo git pull; sudo rsync --delete -r /var/vagrant/vagrant-ghost/puppet/ankushio/ /etc/puppet/modules/ankushio; sudo puppet apply -v /etc/puppet/modules/ankushio/manifests/main.pp'"
