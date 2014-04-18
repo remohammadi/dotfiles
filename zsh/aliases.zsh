@@ -10,6 +10,7 @@ alias ssh='ssh -A -o StrictHostKeyChecking=no'
 alias gitdiff='git difftool -t opendiff -y &> /dev/null'
 
 alias mvne="mvn eclipse:clean; mvn -U eclipse:eclipse;"
+alias mvnc="mvn -U clean compile"
 
 alias l='ls -lrth'
 alias la='ls -lrtha'
@@ -34,3 +35,5 @@ alias v="vim"
 alias vi="vim"
 
 alias puppetnow="ssh -t ankush.io 'cd /var/vagrant; sudo git pull; sudo rsync -v --delete -a /var/vagrant/vagrant-ghost/puppet/ankushio/ /etc/puppet/modules/ankushio; sudo puppet apply -v /etc/puppet/modules/ankushio/manifests/main.pp'"
+
+alias dnsflush='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
