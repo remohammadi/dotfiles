@@ -27,15 +27,15 @@ fi
 # Location of the imageMagick convert command
 convert="/usr/local/bin/convert"
 newsize="${size}x${size}"
-cd $folder
+cd "$folder"
 folder="`pwd`"
 newfolder="${folder}_resize"
-mkdir -p ${newfolder}
+mkdir -p "${newfolder}"
 
 for image_file in *{JPEG,JPG,jpg,jpeg}
 do
   if [ -f "$image_file" ]; then
-    $convert $image_file -adaptive-resize $newsize $newfolder/$image_file
+    $convert "$image_file" -adaptive-resize $newsize "${newfolder}/${image_file}"
     echo "Converted $image_file"
   fi
 done
