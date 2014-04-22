@@ -9,7 +9,7 @@ alias ssh='ssh -A -o StrictHostKeyChecking=no'
 
 alias gitdiff='git difftool -t opendiff -y &> /dev/null'
 
-alias mvne="mvn eclipse:clean; mvn -U eclipse:eclipse;"
+alias mvne="mvn clean; mvn -U compile; mvn eclipse:clean; mvn -U eclipse:eclipse;"
 alias mvnc="mvn -U clean compile"
 
 alias l='ls -lrth'
