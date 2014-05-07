@@ -17,7 +17,10 @@
         type = cat-file -t
         dump = cat-file -p
         d = diff --ignore-space-at-eol -b -w
-
+        g = grep --break --heading --line-number -e
+[grep]
+        extendRegexp = true
+        lineNumber = true
 [color]
         diff = auto
         status = auto
@@ -39,18 +42,16 @@
 
 
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [core]
-	excludesfile = /Users/ankushagarwal/.gitignore
-        editor = vim
+  excludesfile = /Users/ankushagarwal/.gitignore
+  editor = vim
 [push]
         default = matching
-
-
 [apply]
         whitespace = nowarn
 [help]
