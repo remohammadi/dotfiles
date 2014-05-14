@@ -3,6 +3,7 @@
 # under ~/git and set's my work email in the config
 # there. All other repos use my personal email
 
+start_dir=`pwd`
 cd ~/git
 curr_dir=`pwd`
 for dir in `find $curr_dir -type d -iname '.git'`; do
@@ -11,3 +12,4 @@ for dir in `find $curr_dir -type d -iname '.git'`; do
   git config --local user.email "ankushagarwal@rocketfuel.com"
   echo "Completed `pwd`"
 done
+cd "$start_dir"
