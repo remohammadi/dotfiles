@@ -5,6 +5,12 @@
 set -x
 set -e
 
+#Refer : http://stackoverflow.com/questions/19242275/re-error-illegal-byte-sequence-on-mac-os-x
+LC_CTYPE_TMP=$LC_CTYPE
+LANG_TMP=$LANG
+export LC_CTYPE=C
+export LANG=C
+
 t=`date +%s`
 export hist_local_repo="$HOME/.dotfiles/history"
 export hist_file_local="$HOME/.dotfiles/history/history_local"
@@ -23,6 +29,9 @@ cat $hist_file_local | sed -E 's/^\:\ [0-9]+:[0-9];//g' > $hist_file_local_clean
 
 cat $hist_file_remote_clean $hist_file_local_clean | nl | sort -k 2 | uniq -f 1 | sort -n | cut -f 2 > $hist_file_new
 
+export LC_CTYPE=$LC_CTYPE_TMP
+export LANG=$LANG_TMP
+
 cp $hist_file_new $hist_file_local
 cp $hist_file_new $hist_file_remote
 
@@ -33,5 +42,6 @@ git add $hist_file_local $hist_file_remote
 git commit -m "Commit at `date`"
 
 git push origin
+
 
 exit 0
