@@ -12,8 +12,8 @@
         c = commit
         st = status
         br = branch
-        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-        h = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+        hist = log --all --oneline --graph --pretty=format:'%h %Cgreen%ar %Creset|%s %Cred%d %Creset[%an]' --decorate --date=short
+        h = log --all --oneline --graph --pretty=format:'%h %Cgreen%ar %Creset|%s %Cred%d %Creset[%an]' --decorate --date=short
         type = cat-file -t
         dump = cat-file -p
         d = diff --ignore-space-at-eol -b -w
