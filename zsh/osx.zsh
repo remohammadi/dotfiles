@@ -26,3 +26,5 @@ export JAVA_HOME=`/usr/libexec/java_home`
 eval "$(pyenv init -)"
 
 alias updatedb="/usr/libexec/locate.updatedb"
+
+alias pew='say -r 650 "pew, pew, pew\!, pew, pew\!"'

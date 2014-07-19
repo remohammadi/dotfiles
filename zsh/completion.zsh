@@ -34,3 +34,9 @@ set +o extendedhistory
 set -o INC_APPEND_HISTORY
 alias ping='/sbin/ping'
 alias pingg='/sbin/ping www.google.com'
+alias gd='cdiff -s'
+
+mool_init() {
+  source ${HOME}/.mooltool/mool_init.sh
+  echo alias bu=${BU_SCRIPT_DIR}/bu
+}
