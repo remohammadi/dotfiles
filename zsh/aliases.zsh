@@ -37,3 +37,5 @@ alias puppetnow="ssh -t ankush.io 'cd /var/vagrant; sudo git pull; sudo rsync -v
 
 alias dnsflush='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
 alias gerp='grep'
+alias classes='cd /Users/ankushagarwal/code/archive/python-projects/Classes'
+alias cds='cdiff -s'
