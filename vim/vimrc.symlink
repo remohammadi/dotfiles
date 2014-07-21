@@ -30,11 +30,17 @@ autocmd InsertLeave * hi link EndOfLineSpace ErrorMsg
 :set mouse=a " Use the mouse sometimes
 
 set clipboard=unnamed
+
 " Copy and paste stuff around
+" Ctrl - C Copies to Clipboard!!
+" ,, also copies to clipboard! Whew!
+
 nmap <Leader><v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 imap <Leader><v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nmap <Leader><Leader> :.w !pbcopy<CR><CR>
 vmap <Leader><Leader> :w !pbcopy<CR><CR>
+nmap <C-c> :.w !pbcopy<CR><CR>
+vmap <C-c> :w !pbcopy<CR><CR>
 
 autocmd FileType c,cpp,java,scala let b:comment_leader = '//'
 autocmd FileType sh,ruby,python   let b:comment_leader = '#'
@@ -42,7 +48,9 @@ autocmd FileType conf,fstab       let b:comment_leader = '#'
 autocmd FileType vim              let b:comment_leader = '" '
 
 " Comment and uncomment shortcuts "
-noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR> 
+noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
 set ruler " I like seeing the column number
+
+
