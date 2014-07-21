@@ -15,11 +15,6 @@ else
 $ '
 fi
 
-# Set RVM paths and load it as a function
-#Add to $PATH
-PATH=$HOME/.rvm/bin:$PATH
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Set these nice options at last
 set +o extended_history
