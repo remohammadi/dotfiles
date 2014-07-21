@@ -31,7 +31,8 @@ set +o extendedhistory
 set -o INC_APPEND_HISTORY
 alias ping='/sbin/ping'
 alias pingg='/sbin/ping www.google.com'
-alias gd='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff -s'
+alias cdiff='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff'
+alias gd='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff -s --width=0'
 
 mool_init() {
   source ${HOME}/.mooltool/mool_init.sh
