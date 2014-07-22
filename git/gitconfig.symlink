@@ -18,6 +18,7 @@
         dump = cat-file -p
         d = diff --ignore-space-at-eol -b -w --word-diff=color
         g = grep --break --heading --line-number -e
+        showw = show --stat --oneline
 [grep]
         extendRegexp = true
         lineNumber = true
