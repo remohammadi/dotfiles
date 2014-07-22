@@ -33,6 +33,7 @@ alias ping='/sbin/ping'
 alias pingg='/sbin/ping www.google.com'
 alias cdiff='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff'
 alias gd='git d'
+alias gdc='git d --cached'
 
 mool_init() {
   source ${HOME}/.mooltool/mool_init.sh
