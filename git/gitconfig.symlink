@@ -16,7 +16,7 @@
         h = log --all --oneline --graph --pretty=format:'%h %Cgreen%ar %Creset|%s %Cred%d %Creset[%an]' --decorate --date=short
         type = cat-file -t
         dump = cat-file -p
-        d = diff --ignore-space-at-eol -b -w
+        d = diff --ignore-space-at-eol -b -w --word-diff=color
         g = grep --break --heading --line-number -e
 [grep]
         extendRegexp = true

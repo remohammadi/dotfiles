@@ -32,7 +32,7 @@ set -o INC_APPEND_HISTORY
 alias ping='/sbin/ping'
 alias pingg='/sbin/ping www.google.com'
 alias cdiff='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff'
-alias gd='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff -s --width=0'
+alias gd='git d'
 
 mool_init() {
   source ${HOME}/.mooltool/mool_init.sh
