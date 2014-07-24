@@ -36,12 +36,9 @@ alias gd='git d'
 alias gdc='git d --cached'
 
 function git-reset-hard-head() {
-  read -q "REPLY?git reset --hard HEAD. Sure??  "
-  REPLY=$REPLY:l
-  if [[ -z "$REPLY" ]] || [[ "$REPLY" == "yes" ]] || [[ "$REPLY" == "y" ]]; then
-    git reset --hard HEAD
-  fi
+  git stash && git reset --hard HEAD && echo "Changes stashed and reset hard to HEAD"
 }
+
 alias grhh='git-reset-hard-head'
 mool_init() {
   source ${HOME}/.mooltool/mool_init.sh
