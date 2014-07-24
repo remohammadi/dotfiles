@@ -35,6 +35,14 @@ alias cdiff='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff'
 alias gd='git d'
 alias gdc='git d --cached'
 
+function git-reset-hard-head() {
+  read -q "REPLY?git reset --hard HEAD. Sure??  "
+  REPLY=$REPLY:l
+  if [[ -z "$REPLY" ]] || [[ "$REPLY" == "yes" ]] || [[ "$REPLY" == "y" ]]; then
+    git reset --hard HEAD
+  fi
+}
+alias grhh='git-reset-hard-head'
 mool_init() {
   source ${HOME}/.mooltool/mool_init.sh
   echo alias bu=${BU_SCRIPT_DIR}/bu

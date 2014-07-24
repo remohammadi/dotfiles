@@ -27,3 +27,4 @@ alias gpo='git push origin'
 alias gcam='git commit -a -m'
 alias gaa='git add -u'
 alias gcaa='git commit -a --amend'
+
