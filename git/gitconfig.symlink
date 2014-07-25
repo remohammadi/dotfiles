@@ -11,7 +11,6 @@
         co = checkout
         c = commit
         st = status
-        br = branch
         hist = log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --decorate --date=short
         h = log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --decorate --date=short
         type = cat-file -t
@@ -19,6 +18,7 @@
         d = diff --ignore-space-at-eol -b -w --word-diff=color
         g = grep --break --heading --line-number -e
         showw = show --stat --oneline
+        b = branch
 [grep]
         extendRegexp = true
         lineNumber = true
@@ -50,9 +50,3 @@
         whitespace = nowarn
 [help]
         autocorrect = 1
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
