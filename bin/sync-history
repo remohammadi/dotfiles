@@ -12,15 +12,15 @@ export LC_CTYPE=C
 export LANG=C
 
 t=`date +%s`
-export hist_local_repo="$HOME/.dotfiles/history"
-export hist_file_local="$HOME/.dotfiles/history/history_local"
-export hist_file_remote="$HOME/.dotfiles/history/history_remote"
-export hist_file_local_clean="$HOME/.dotfiles/history/history_local_clean"
-export hist_file_remote_clean="$HOME/.dotfiles/history/history_remote_clean"
-export hist_file_new="$HOME/.dotfiles/history/history_local_new"
+export hist_local_repo="$HOME/.history_directory"
+export hist_file_local="$hist_local_repo/history_local"
+export hist_file_remote="$hist_local_repo/history_remote"
+export hist_file_local_clean="$hist_local_repo/history_local_clean"
+export hist_file_remote_clean="$hist_local_repo/history_remote_clean"
+export hist_file_new="$hist_local_repo/history_local_new"
 export bitbucket_repo="git@bitbucket.org:ankushagarwal11/history.git"
 current_line_count=`wc -l $hist_file_remote | awk '{print $1}'`
-cd "$HOME/.dotfiles/history"
+cd "$hist_local_repo"
 
 touch $hist_file_local $hist_file_remote
 

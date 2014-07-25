@@ -22,7 +22,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 set +o extended_history
 set +o histignorespace
 set +o histverify
-export HISTFILE=$HOME/.dotfiles/history/history_local
+export HISTFILE=$HOME/.history_directory/history_local
 set -o APPEND_HISTORY
 export HISTSIZE=50000
 export SAVEHIST=50000
