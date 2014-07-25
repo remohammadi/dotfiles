@@ -35,12 +35,17 @@ export LANG=$LANG_TMP
 cp $hist_file_new $hist_file_local
 cp $hist_file_new $hist_file_remote
 
+new_byte_count=`wc -c $hist_file_remote | awk '{print $1}'`
 new_line_count=`wc -l $hist_file_remote | awk '{print $1}'`
 difference=$(($new_line_count - $current_line_count))
 
 
 if [[ $difference -lt "0" ]]; then
   touch $HOME/'Macbook history export problem'
+fi
+
+if [[ $new_byte_count -gt "2000000" ]]; then
+  touch $HOME/'History file size has become too large (>2MB). Go fix it'
 fi
 
 rm -f $hist_file_local_clean $hist_file_remote_clean $hist_file_new
