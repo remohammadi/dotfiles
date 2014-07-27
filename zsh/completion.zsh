@@ -38,7 +38,7 @@ alias gdc='git d --cached'
 function git-reset-hard-head() {
   git stash && git reset --hard HEAD && echo "Changes stashed and reset hard to HEAD"
 }
-
+alias trash='trash_osx'
 alias grhh='git-reset-hard-head'
 mool_init() {
   source ${HOME}/.mooltool/mool_init.sh
