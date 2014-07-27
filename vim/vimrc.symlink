@@ -53,4 +53,4 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 
 set ruler " I like seeing the column number
 
-
+set paste
