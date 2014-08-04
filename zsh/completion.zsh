@@ -17,6 +17,7 @@ fi
 
 #Hello, rbenv!
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+RBENV_ROOT=/usr/local/var/rbenv
 
 # Set these nice options at last
 set +o extended_history
