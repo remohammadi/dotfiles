@@ -35,7 +35,7 @@ alias vi="vim"
 
 alias puppetnow="ssh -t ankush.io 'cd /var/vagrant; sudo git pull; sudo rsync -v --delete -a /var/vagrant/vagrant-ghost/puppet/ankushio/ /etc/puppet/modules/ankushio; sudo puppet apply -v /etc/puppet/modules/ankushio/manifests/main.pp'"
 
-alias dnsflush='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
+alias dnsflush='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; sudo discoveryutil mdnsflushcache'
 alias gerp='grep'
 alias classes='cd /Users/ankushagarwal/code/archive/python-projects/Classes'
-alias cds='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff -s'
+alias cds='/Users/ankushagarwal/.pyenv/versions/2.7.8/bin/cdiff -s'
