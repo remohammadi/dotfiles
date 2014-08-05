@@ -32,6 +32,7 @@ alias ankush='ssh ankush.io'
 alias icurl='curl -I'
 alias v="vim"
 alias vi="vim"
+alias vim="mvim"
 
 alias puppetnow="ssh -t ankush.io 'cd /var/vagrant; sudo git pull; sudo rsync -v --delete -a /var/vagrant/vagrant-ghost/puppet/ankushio/ /etc/puppet/modules/ankushio; sudo puppet apply -v /etc/puppet/modules/ankushio/manifests/main.pp'"
 

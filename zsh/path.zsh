@@ -12,9 +12,9 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 export OH_MY_ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="kphoen"
 
-export EDITOR='vim'
+export EDITOR='mvim'
 
-export GIT_EDITOR=vim
+export GIT_EDITOR=mvim
 
 export amazon_pc="54.215.16.177"
 

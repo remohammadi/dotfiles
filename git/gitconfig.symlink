@@ -43,7 +43,7 @@
 
 [core]
   excludesfile = /Users/ankushagarwal/.gitignore
-  editor = vim
+  editor = mvim
 [push]
         default = matching
 [apply]
