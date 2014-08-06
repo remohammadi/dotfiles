@@ -14,7 +14,7 @@ export ZSH_THEME="kphoen"
 
 export EDITOR='mvim'
 
-export GIT_EDITOR=mvim
+export GIT_EDITOR=vim
 
 export amazon_pc="54.215.16.177"
 
