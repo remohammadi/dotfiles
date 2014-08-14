@@ -19,6 +19,7 @@
         g = grep --break --heading --line-number -e
         showw = show --stat --oneline
         b = branch
+        me = log --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --decorate --author="ankush" --
 [grep]
         extendRegexp = true
         lineNumber = true
