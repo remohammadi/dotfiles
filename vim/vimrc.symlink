@@ -55,3 +55,5 @@ set ruler " I like seeing the column number
 
 set paste
 colorscheme molokai " http://www.vim.org/scripts/script.php?script_id=2340 . Copy it to ~/.vim/colors/ folder
+au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+set backupskip=/tmp/*,/private/tmp/*
