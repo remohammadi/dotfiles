@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -e
+if [[ $1 == "" ]]; then
+  echo "Enter time in minutes"
+  exit
+fi
+sleep $(( $1 * 60 ))
+for i in `seq 1 30`; do
+  afplay /System/Library/Sounds/Pop.aiff
+done
