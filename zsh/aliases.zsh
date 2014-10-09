@@ -40,3 +40,4 @@ alias dnsflush='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; su
 alias gerp='grep'
 alias classes='cd /Users/ankushagarwal/code/archive/python-projects/Classes'
 alias cds='/Users/ankushagarwal/.pyenv/versions/2.7.8/bin/cdiff -s'
+alias randomizeWiFi='sudo spoof-mac randomize Wi-Fi'
