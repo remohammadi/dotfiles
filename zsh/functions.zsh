@@ -13,7 +13,15 @@ function findd() {
   if [[ -z $1 ]]; then
     echo "findd <filename>"
   else
-    find . -iname "*$1*"
+    find . -iname "${1}"
+  fi
+}
+
+function findr() {
+  if [[ -z $1 ]]; then
+    echo "findr <regex>"
+  else
+    find . -iregex "${1}"
   fi
 }
 
