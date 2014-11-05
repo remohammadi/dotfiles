@@ -89,3 +89,14 @@ function pg() {
 function docker-ip() {
   boot2docker ip 2> /dev/null
 }
+
+function docker-enter() {
+  boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter "$@"
+}
+
+function autocommit() {
+  git add -u
+  git status -sb | grep -v ^## > /tmp/gitsm
+  git commit --file=/tmp/gitsm
+  rm -f /tmp/gitsm
+}
