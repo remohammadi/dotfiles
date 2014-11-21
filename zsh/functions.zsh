@@ -96,7 +96,7 @@ function docker-enter() {
 
 function autocommit() {
   git add -u
-  git status -sb | grep -v ^## > /tmp/gitsm
+  git status -sb | grep -v ^## | grep -v '^??' > /tmp/gitsm
   git commit --file=/tmp/gitsm
   rm -f /tmp/gitsm
 }
