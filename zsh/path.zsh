@@ -1,5 +1,5 @@
 #Set PATH here
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/X11/bin:$HOME/git/repo/rrepo:$HOME/code/scripts:$HOME/.dotfiles/bin:$PATH:/opt/local/bin:/opt/local/sbin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/X11/bin:$HOME/git/repo/rrepo:$HOME/code/scripts:$HOME/.dotfiles/bin:$PATH:/opt/local/bin:/opt/local/sbin
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 #Postgres
