@@ -27,6 +27,7 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 alias tial='tail'
 
 alias aws='ssh -i ~/.ssh/ankush-aws-ubuntu-docker.pem  ubuntu@54.215.16.177'
+alias aws2='ssh 54.176.43.199'
 alias ankush='ssh ankush.io'
 
 alias icurl='curl -I'
