@@ -43,7 +43,7 @@
         untracked = cyan
 
 [core]
-  excludesfile = /Users/ankushagarwal/.gitignore
+  excludesfile = /Users/ankush.agarwal/.gitignore
   editor = mvim
 [push]
         default = matching

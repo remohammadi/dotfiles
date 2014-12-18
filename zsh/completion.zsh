@@ -37,7 +37,7 @@ set +o extendedhistory
 set -o INC_APPEND_HISTORY
 alias ping='/sbin/ping'
 alias pingg='/sbin/ping www.google.com'
-alias cdiff='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff'
+alias cdiff='/Users/ankush.agarwal/.pyenv/versions/2.7.6/bin/cdiff'
 alias gd='git d'
 alias gdc='git d --cached'
 
