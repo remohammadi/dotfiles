@@ -1,6 +1,6 @@
 [user]
-        name = Ankush Agarwal
-        email = ankushagarwal11@gmail.com
+	name = Ankush Agarwal
+	email = ankushagarwal11@gmail.com
 [credential]
         helper = osxkeychain
 [alias]

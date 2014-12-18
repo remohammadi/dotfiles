@@ -2,10 +2,6 @@
 #
 # bootstrap installs things.
 chmod -R 755 $HOME/.dotfiles
-if [[ !  "$SHELL" =~ .*zsh ]]; then
-  "Current shell is not zsh. Changing it."
-  sudo chsh -s /bin/zsh $USER
-fi
 
 DOTFILES_ROOT="$HOME/.dotfiles"
 
