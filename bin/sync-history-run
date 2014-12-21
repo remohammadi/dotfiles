@@ -1,5 +1,5 @@
 #!/bin/bash
-# Crontab expression : */30 * * * * /Users/ankush.agarwal/.dotfiles/bin/sync-history-run
+# Crontab expression : */30 * * * * /Users/ankushagarwal/.dotfiles/bin/sync-history-run
 t=`date +%s`
 mkdir /tmp/sync_dotfiles 2> /dev/null
 $HOME/.dotfiles/bin/sync-history &> /tmp/sync_dotfiles/sync_history_log${t}

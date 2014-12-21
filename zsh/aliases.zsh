@@ -39,6 +39,6 @@ alias puppetnow="ssh -t ankush.io 'cd /var/vagrant; sudo git pull; sudo rsync -v
 
 alias dnsflush='sudo discoveryutil udnsflushcaches'
 alias gerp='grep'
-alias classes='cd /Users/ankush.agarwal/code/archive/python-projects/Classes'
-alias cds='/Users/ankush.agarwal/.pyenv/versions/2.7.8/bin/cdiff -s'
+alias classes='cd /Users/ankushagarwal/code/archive/python-projects/Classes'
+alias cds='/Users/ankushagarwal/.pyenv/versions/2.7.8/bin/cdiff -s'
 alias randomizeWiFi='sudo spoof-mac randomize Wi-Fi'
