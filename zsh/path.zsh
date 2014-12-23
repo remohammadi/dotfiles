@@ -12,7 +12,7 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 export OH_MY_ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="kphoen"
 
-export EDITOR='mvim'
+export EDITOR='vim'
 
 export GIT_EDITOR=vim
 
