@@ -33,7 +33,6 @@ alias ankush='ssh ankush.io'
 alias icurl='curl -I'
 alias v="vim"
 alias vi="vim"
-alias vim="mvim"
 
 alias puppetnow="ssh -t ankush.io 'cd /var/vagrant; sudo git pull; sudo rsync -v --delete -a /var/vagrant/vagrant-ghost/puppet/ankushio/ /etc/puppet/modules/ankushio; sudo puppet apply -v /etc/puppet/modules/ankushio/manifests/main.pp'"
 
@@ -42,3 +41,25 @@ alias gerp='grep'
 alias classes='cd /Users/ankushagarwal/code/archive/python-projects/Classes'
 alias cds='/Users/ankushagarwal/.pyenv/versions/2.7.8/bin/cdiff -s'
 alias randomizeWiFi='sudo spoof-mac randomize Wi-Fi'
+
+if which gxargs &> /dev/null; then
+	alias xargs=gxargs
+fi
+# if which gwhich &> /dev/null; then
+# 	alias which=gwhich
+# fi
+if which gfind &> /dev/null; then
+	alias find=gfind
+fi
+if which gsed &> /dev/null; then
+	alias sed=gsed
+fi
+if which gtar &> /dev/null; then
+	alias tar=gtar
+fi
+if which gxargs &> /dev/null; then
+	alias xargs=gxargs
+fi
+if which gawk &> /dev/null; then
+	alias awk=gawk
+fi
