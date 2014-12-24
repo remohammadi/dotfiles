@@ -7,6 +7,18 @@ function drit() {
 	docker run -it "$1" /bin/bash
 }
 
+function de() {
+	container_id=`docker ps | grep -v 'CONTAINER' | head -1 | awk '{print $1}'`
+	docker exec -it $container_id /bin/bash
+}
+
+alias dps='docker ps'
+
+function dockerstop () {
+	container_id=`docker ps | grep -v 'CONTAINER' | head -1 | awk '{print $1}'`
+	docker stop ${container_id}
+}
+
 function docker-ip() {
   boot2docker ip 2> /dev/null
 }
