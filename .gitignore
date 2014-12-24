@@ -4,3 +4,5 @@ history/history*
 bin/rfgit
 docker/host.zsh
 *.DS_Store
+
+st3/Packages/User/Package Control.cache/
