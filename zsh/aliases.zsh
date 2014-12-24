@@ -6,12 +6,6 @@ alias gitk='gitk &> /dev/null'
 alias scp='scp -o StrictHostKeyChecking=no'
 alias ssh='ssh -A -o StrictHostKeyChecking=no'
 
-
-alias gitdiff='git difftool -t opendiff -y &> /dev/null'
-
-alias mvne="mvn dependency:sources; mvn dependency:resolve -Dclassifier=javadoc; mvn eclipse:clean; mvn -U eclipse:eclipse;"
-alias mvnc="mvn -U clean compile"
-
 alias l='ls -lrth'
 alias la='ls -lrtha'
 alias lh='ls -ld .??*'
@@ -26,15 +20,11 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 
 alias tial='tail'
 
-alias aws='ssh -i ~/.ssh/ankush-aws-ubuntu-docker.pem  ubuntu@54.215.16.177'
 alias aws2='ssh 54.176.43.199'
 alias ankush='ssh ankush.io'
 
-alias icurl='curl -I'
 alias v="vim"
 alias vi="vim"
-
-alias puppetnow="ssh -t ankush.io 'cd /var/vagrant; sudo git pull; sudo rsync -v --delete -a /var/vagrant/vagrant-ghost/puppet/ankushio/ /etc/puppet/modules/ankushio; sudo puppet apply -v /etc/puppet/modules/ankushio/manifests/main.pp'"
 
 alias dnsflush='sudo discoveryutil udnsflushcaches'
 alias gerp='grep'

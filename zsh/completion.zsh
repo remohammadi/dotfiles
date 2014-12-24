@@ -7,6 +7,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' insert-tab pending
 
 #Export PROMPT here at last
+setopt prompt_subst
 if [[ -n $SSH_CONNECTION ]]; then
   export PROMPT='[%{$fg[green]%}'"$USER"'%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)]
 $ '
@@ -21,7 +22,6 @@ $ '
 fi
 
 #pyenv and rbenv should be at last because they modify the path variable
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 RBENV_ROOT=/usr/local/var/rbenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
