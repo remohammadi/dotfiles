@@ -25,8 +25,6 @@ alias vi="vim"
 
 alias dnsflush='sudo discoveryutil udnsflushcaches'
 alias gerp='grep'
-alias classes='cd /Users/ankushagarwal/code/archive/python-projects/Classes'
-alias cds='/Users/ankushagarwal/.pyenv/versions/2.7.8/bin/cdiff -s'
 alias randomizeWiFi='sudo spoof-mac randomize Wi-Fi'
 
 alias locate="/usr/bin/locate"
