@@ -3,3 +3,4 @@ history/.git/
 history/history*
 bin/rfgit
 docker/host.zsh
+*.DS_Store
