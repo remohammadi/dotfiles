@@ -1,23 +1,15 @@
 #Set PATH here
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/X11/bin:$HOME/git/repo/rrepo:$HOME/code/scripts:$HOME/.dotfiles/bin:$PATH:/opt/local/bin:/opt/local/sbin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/X11/bin:$HOME/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
-
-#Postgres
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
-
-#Configure zsh here
-
-#History related options
 
 export OH_MY_ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="kphoen"
+export ZSH=~/.oh-my-zsh
+plugins=(git osx bundler)
+. $ZSH/oh-my-zsh.sh
+export ZSH=~/.dotfiles
 
-export EDITOR='vim'
-
-export GIT_EDITOR=vim
-
-export amazon_pc="54.215.16.177"
-
+#Configure zsh here
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
 setopt NO_LIST_BEEP

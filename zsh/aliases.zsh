@@ -42,24 +42,5 @@ alias classes='cd /Users/ankushagarwal/code/archive/python-projects/Classes'
 alias cds='/Users/ankushagarwal/.pyenv/versions/2.7.8/bin/cdiff -s'
 alias randomizeWiFi='sudo spoof-mac randomize Wi-Fi'
 
-if which gxargs &> /dev/null; then
-	alias xargs=gxargs
-fi
-# if which gwhich &> /dev/null; then
-# 	alias which=gwhich
-# fi
-if which gfind &> /dev/null; then
-	alias find=gfind
-fi
-if which gsed &> /dev/null; then
-	alias sed=gsed
-fi
-if which gtar &> /dev/null; then
-	alias tar=gtar
-fi
-if which gxargs &> /dev/null; then
-	alias xargs=gxargs
-fi
-if which gawk &> /dev/null; then
-	alias awk=gawk
-fi
+alias locate="/usr/bin/locate"
+alias updatedb="/usr/libexec/locate.updatedb"

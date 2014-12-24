@@ -1,12 +1,3 @@
-# Use `hub` as our git wrapper:
-#   http://defunkt.github.com/hub/
-
-#Don't use hub
-# hub_path=$(which hub)
-# if (( $+commands[hub] ))
-# then
-#   alias git=$hub_path
-# fi
 
 # The rest of my fun git aliases
 alias gl='git pull --prune'
@@ -28,3 +19,7 @@ alias gcam='git commit -a -m'
 alias gaa='git add -u'
 alias gcaa='git commit -a --amend'
 
+function git-reset-hard-head() {
+  git stash && git reset --hard HEAD && echo "Changes stashed and reset hard to HEAD"
+}
+alias grhh='git-reset-hard-head'

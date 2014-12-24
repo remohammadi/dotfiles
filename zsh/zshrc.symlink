@@ -6,9 +6,11 @@ export PROJECTS=~/git
 
 
 function sourcee() {
-  #echo "Sourcing $1"
+  #Uncomment this for debugging
+  echo "Sourcing $1"
   source $1
 }
+
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]

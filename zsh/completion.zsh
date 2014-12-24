@@ -20,9 +20,12 @@ $ '
   fi
 fi
 
-#Hello, rbenv!
+#pyenv and rbenv should be at last because they modify the path variable
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 RBENV_ROOT=/usr/local/var/rbenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PYENV_ROOT=/usr/local/opt/pyenv
 
 # Set these nice options at last
 set +o extended_history
@@ -37,16 +40,7 @@ set +o extendedhistory
 set -o INC_APPEND_HISTORY
 alias ping='/sbin/ping'
 alias pingg='/sbin/ping www.google.com'
-alias cdiff='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff'
+#alias cdiff='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff'
 alias gd='git d'
 alias gdc='git d --cached'
 
-function git-reset-hard-head() {
-  git stash && git reset --hard HEAD && echo "Changes stashed and reset hard to HEAD"
-}
-alias trash='trash_osx'
-alias grhh='git-reset-hard-head'
-mool_init() {
-  source ${HOME}/.mooltool/mool_init.sh
-  echo alias bu=${BU_SCRIPT_DIR}/bu
-}
