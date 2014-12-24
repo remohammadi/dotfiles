@@ -4,9 +4,9 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 export OH_MY_ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="kphoen"
-export ZSH=~/.oh-my-zsh
-plugins=(git osx bundler)
-. $ZSH/oh-my-zsh.sh
+export ZSH=$HOME/.oh-my-zsh
+plugins=(autojump git)
+. $HOME/.oh-my-zsh/oh-my-zsh.sh
 export ZSH=~/.dotfiles
 
 #Configure zsh here
