@@ -1,0 +1,23 @@
+{
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
+	"installed_packages":
+	[
+		"AutoPEP8",
+		"BeautifyRuby",
+		"BracketHighlighter",
+		"CursorRuler",
+		"Dockerfile Syntax Highlighting",
+		"HTML Boilerplate",
+		"HTML Snippets",
+		"HTML-CSS-JS Prettify",
+		"JsFormat",
+		"Package Control",
+		"SideBarEnhancements",
+		"Theme - Cobalt2",
+		"TrailingSpaces"
+	]
+}
