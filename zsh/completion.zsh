@@ -38,9 +38,4 @@ export SAVEHIST=50000
 set -o HIST_EXPIRE_DUPS_FIRST
 set +o extendedhistory
 set -o INC_APPEND_HISTORY
-alias ping='/sbin/ping'
-alias pingg='/sbin/ping www.google.com'
-#alias cdiff='/Users/ankushagarwal/.pyenv/versions/2.7.6/bin/cdiff'
-alias gd='git d'
-alias gdc='git d --cached'
 

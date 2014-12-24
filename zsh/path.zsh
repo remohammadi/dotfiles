@@ -2,6 +2,7 @@
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/X11/bin:$HOME/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
+# Do Oh My ZSH stuff
 export OH_MY_ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="kphoen"
 export ZSH=$HOME/.oh-my-zsh

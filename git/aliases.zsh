@@ -23,3 +23,12 @@ function git-reset-hard-head() {
   git stash && git reset --hard HEAD && echo "Changes stashed and reset hard to HEAD"
 }
 alias grhh='git-reset-hard-head'
+
+alias gd='git d'
+alias gdc='git d --cached'
+
+function gitrebase() {
+  (git fetch --tags &) &> /dev/null
+  git fetch origin;
+  git rebase origin/master;
+}

@@ -7,3 +7,6 @@ function drit() {
 	docker run -it "$1" /bin/bash
 }
 
+function docker-ip() {
+  boot2docker ip 2> /dev/null
+}
