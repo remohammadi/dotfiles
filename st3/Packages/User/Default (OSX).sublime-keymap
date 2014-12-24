@@ -2,5 +2,4 @@
   { "keys": ["super+alt+left"], "command": "jump_back" },
   { "keys": ["super+alt+right"], "command": "jump_forward" },
   { "keys": ["super+ctrl+o"], "command": "project_manager_list", "args": {"action": "new"} }
-
 ]
