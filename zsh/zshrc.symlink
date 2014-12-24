@@ -6,8 +6,8 @@ export PROJECTS=~/git
 
 
 function sourcee() {
-  #Uncomment this for debugging
-  echo "Sourcing $1"
+  #Uncomment the next line for debugging
+  #echo "Sourcing $1"
   source $1
 }
 
