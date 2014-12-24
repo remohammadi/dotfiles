@@ -5,4 +5,6 @@ bin/rfgit
 docker/host.zsh
 *.DS_Store
 
+#Sublime Shit
 st3/Packages/User/Package Control.cache/
+st3/Packages/User/Projects/
