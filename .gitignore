@@ -2,3 +2,4 @@ zsh/local.zsh
 history/.git/
 history/history*
 bin/rfgit
+docker/host.zsh
