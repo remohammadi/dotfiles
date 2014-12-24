@@ -44,7 +44,7 @@
 
 [core]
 	excludesfile = /Users/ankushagarwal/.gitignore
-  editor = vim
+    editor = vim
 [push]
         default = matching
 [apply]

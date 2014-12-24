@@ -1,4 +1,5 @@
 #!/bin/bash
 echo "The following VMs are running"
 vboxmanage list runningvms
+echo "Bringing them down"
 vboxmanage list runningvms | /usr/bin/sed -E 's/.*\{(.*)\}/\1/' | xargs -L1 -I {} VBoxManage controlvm {} savestate
