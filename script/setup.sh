@@ -10,7 +10,12 @@ then
   exit 1  
 fi
 cd $HOME
-sudo chsh -s /bin/zsh $USER
+if which /usr/local/bin/zsh; then
+	sudo chsh -s /usr/local/bin/zsh $USER
+else
+	sudo chsh -s /bin/zsh $USER	
+fi
+mkdir -p $HOME/.history-directory
 rm -rf .dotfiles &> /dev/null || true
 rm -rf .oh-my-zsh &> /dev/null || true
 git clone https://github.com/ankushagarwal/dotfiles.git .dotfiles
