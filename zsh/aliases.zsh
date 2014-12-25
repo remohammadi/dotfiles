@@ -1,4 +1,5 @@
-alias reload!='. ~/.zshrc'
+alias reload='. ~/.zshrc'
+
 alias pingg='ping www.google.com'
 
 alias scp='scp -o StrictHostKeyChecking=no'
@@ -29,3 +30,5 @@ alias randomizeWiFi='sudo spoof-mac randomize Wi-Fi'
 
 alias locate="/usr/bin/locate"
 alias updatedb="/usr/libexec/locate.updatedb"
+
+alias dott="cd ${HOME}/.dotfiles"
