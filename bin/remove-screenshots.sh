@@ -1,2 +1,2 @@
 #!/bin/bash
-mv /Users/ankushagarwal/Documents/ScreenShots/* /Users/ankushagarwal/.Trash &> /dev/null || true
+/usr/local/bin/find /Users/ankushagarwal/Documents/ScreenShots  -type f -mmin +2000 | /usr/local/bin/xargs --no-run-if-empty rm
