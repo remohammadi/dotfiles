@@ -1,3 +1,11 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+
 syntax on
 
 " Wrap gitcommit file types at the appropriate length
@@ -57,3 +65,9 @@ set paste
 colorscheme molokai " http://www.vim.org/scripts/script.php?script_id=2340 . Copy it to ~/.vim/colors/ folder
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 set backupskip=/tmp/*,/private/tmp/*
+
+
+Plugin 'fatih/vim-go'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
