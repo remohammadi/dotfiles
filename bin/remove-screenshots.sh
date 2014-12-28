@@ -1,2 +1,2 @@
 #!/bin/bash
-mv /Users/ankushagarwal/Documents/ScreenShots/* ~/.Trash
+mv /Users/ankushagarwal/Documents/ScreenShots/* /Users/ankushagarwal/.Trash
