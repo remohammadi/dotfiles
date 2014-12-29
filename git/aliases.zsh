@@ -29,7 +29,7 @@ function gitrebase() {
   git fetch origin;
   git rebase origin/master;
 }
-
+unalias gp
 function gp() {
   branch=`git rev-parse --abbrev-ref HEAD`
   git push origin $branch
