@@ -15,8 +15,7 @@ function de() {
 alias dps='docker ps'
 
 function dockerstop () {
-	container_id=`docker ps | grep -v 'CONTAINER' | head -1 | awk '{print $1}'`
-	docker stop ${container_id}
+  docker ps | grep -v 'CONTAINER' | head -1 | awk '{print $1}' | xargs --no-run-if-empty docker stop
 }
 
 function docker-ip() {
@@ -24,5 +23,5 @@ function docker-ip() {
 }
 
 function dimagess () {
-  docker images | grep -v '<none>                    <none>' | head -20
+  docker images | grep -v '<none> *<none>'
 }
