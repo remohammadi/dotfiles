@@ -33,7 +33,7 @@ function gitrebase() {
 unalias gp
 function gp() {
   branch=`git rev-parse --abbrev-ref HEAD`
-  git push origin $branch
+  git push $1 origin $branch
 }
 
 function gitsquash() {
