@@ -24,6 +24,7 @@ alias grhh='git-reset-hard-head'
 alias gd='git d'
 alias gdc='git d --cached'
 
+alias gfa='git fetch --all && git fetch --tags'
 function gitrebase() {
   (git fetch --tags &) &> /dev/null
   git fetch origin;
