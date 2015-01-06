@@ -4,7 +4,11 @@ export DOCKER_TLS_VERIFY=1
 export DOCKER_HOST="tcp://192.168.59.103:2376"
 
 function drit() {
-	docker run -it "$1" /bin/bash
+  if [[ -z "$1" ]]; then
+    docker run -it "`docker images | head -2 | tail -1 | awk '{print $3}'`" /bin/bash
+  else
+    docker run -it "$1" /bin/bash
+  fi
 }
 
 function de() {

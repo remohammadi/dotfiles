@@ -36,6 +36,16 @@ function gp() {
   git push origin $branch
 }
 
+function gitsquash() {
+  echo "Latest commit id is `git rev-parse HEAD`"
+  if [[ -z $1 ]]; then
+    echo "Please enter the number of commits to squash"
+  else
+    git reset --soft HEAD~$1 &&
+    git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"
+  fi
+}
+
 if [[ -e /Users/ankushagarwal/.pyenv/shims/cdiff ]]; then
   alias gd='/Users/ankushagarwal/.pyenv/shims/cdiff -s'
   alias gdc='/Users/ankushagarwal/.pyenv/shims/cdiff -s --cached'
