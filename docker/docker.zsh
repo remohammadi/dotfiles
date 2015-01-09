@@ -18,7 +18,7 @@ function de() {
 
 alias dps='docker ps'
 
-function dockerstop () {
+function ds () {
   docker ps | grep -v 'CONTAINER' | head -1 | awk '{print $1}' | xargs --no-run-if-empty docker stop
 }
 
@@ -26,7 +26,11 @@ function docker-ip() {
   boot2docker ip 2> /dev/null
 }
 
-function dimagess () {
-  docker images | grep -v '<none> *<none>'
+function di () {
+  if [[ "$1" == "" ]]; then
+    docker images | grep -v '<none> *<none>'
+  else
+    docker images | grep -v '<none> *<none>' | grep "$1"
+  fi
 }
 alias bd=boot2docker
