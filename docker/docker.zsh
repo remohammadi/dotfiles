@@ -34,3 +34,4 @@ function di () {
   fi
 }
 alias bd=boot2docker
+alias db='docker build'
