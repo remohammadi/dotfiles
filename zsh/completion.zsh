@@ -27,6 +27,9 @@ RBENV_ROOT=/usr/local/var/rbenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT=/usr/local/opt/pyenv
 
+#Override oh-my-zsh, that's why this is at the end
+alias d=docker
+
 # Set these nice options at last
 set +o extended_history
 set +o histignorespace
