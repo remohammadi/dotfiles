@@ -29,3 +29,4 @@ function docker-ip() {
 function dimagess () {
   docker images | grep -v '<none> *<none>'
 }
+alias bd=boot2docker
