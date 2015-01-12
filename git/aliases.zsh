@@ -36,6 +36,15 @@ function gp() {
   git push $1 origin $branch
 }
 
+function gitdelete() {
+  if [[ -z $1 ]]; then
+    echo "Please enter the name of branch to delete"
+  else
+    git branch -D $1
+    git branch -Dr origin/$1
+  fi
+}
+
 function gitsquash() {
   echo "Latest commit id is `git rev-parse HEAD`"
   if [[ -z $1 ]]; then
