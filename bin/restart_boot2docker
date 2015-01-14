@@ -1,0 +1,17 @@
+#!/bin/bash
+docker ps -q | xargs --no-run-if-empty docker stop
+sleep 2
+boot2docker restart
+echo "Restarted boot2docker"
+boot2docker ssh sudo sh /mnt/sda1/var/hosts
+sleep 15
+i=0
+while ! docker start registry; do
+  sleep 5
+  ((i++))
+  if [[ $i -gt 3 ]]; then
+    break
+  fi
+done
+sleep 5
+docker start registry
