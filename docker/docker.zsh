@@ -30,6 +30,14 @@ function dp() {
   docker push $1
 }
 
+function dlogs() {
+  if [[ -z "$1" ]]; then
+    echo "Usage dlogs <container>"
+  else
+    docker logs --tail=100 -f $1
+  fi
+}
+
 function di () {
   if [[ "$1" == "" ]]; then
     docker images | grep -v '<none> *<none>'
