@@ -1,7 +1,13 @@
 #!/bin/bash
-docker ps -q | xargs --no-run-if-empty docker stop
-sleep 2
-boot2docker restart
+status=`boot2docker status`
+if [[ $status == "running" ]]; then
+  docker ps -q | xargs --no-run-if-empty docker stop
+fi
+if ! boot2docker restart
+then
+  echo "Failed to restart boot2docker, please try again"
+  exit 1
+fi
 echo "Restarted boot2docker"
 boot2docker ssh sudo sh /mnt/sda1/var/hosts
 sleep 15
