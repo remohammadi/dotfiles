@@ -26,6 +26,10 @@ function docker-ip() {
   boot2docker ip 2> /dev/null
 }
 
+function dp() {
+  docker push $1
+}
+
 function di () {
   if [[ "$1" == "" ]]; then
     docker images | grep -v '<none> *<none>'
