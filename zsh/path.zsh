@@ -1,5 +1,8 @@
 #Set PATH here
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/X11/bin:$HOME/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin
+#Add GNU Utils to path
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 # Do Oh My ZSH stuff
