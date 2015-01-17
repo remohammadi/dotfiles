@@ -26,8 +26,7 @@ alias gdc='git d --cached'
 
 alias gfa='git fetch --all && git fetch --tags'
 function gitrebase() {
-  (git fetch --tags &) &> /dev/null
-  git fetch origin;
+  git fetch --all && git fetch --tags;
   git rebase origin/master;
 }
 unalias gp
