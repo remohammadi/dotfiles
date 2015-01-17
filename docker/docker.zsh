@@ -12,8 +12,13 @@ function drit() {
 }
 
 function de() {
-	container_id=`docker ps | grep -v 'CONTAINER' | head -1 | awk '{print $1}'`
-	docker exec -it $container_id /bin/bash
+  if [[ -z "$1" ]]; then
+    container_id=`docker ps | grep -v 'CONTAINER' | head -1 | awk '{print $1}'`
+    docker exec -it $container_id /bin/bash
+  else
+    docker exec -it $1 /bin/bash
+  fi
+
 }
 
 alias dps='docker ps'
