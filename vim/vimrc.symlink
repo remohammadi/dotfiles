@@ -62,7 +62,7 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 set ruler " I like seeing the column number
 
 set paste
-colorscheme molokai " http://www.vim.org/scripts/script.php?script_id=2340 . Copy it to ~/.vim/colors/ folder
+colorscheme dark " http://www.vim.org/scripts/script.php?script_id=2340 . Copy it to ~/.vim/colors/ folder
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 set backupskip=/tmp/*,/private/tmp/*
 

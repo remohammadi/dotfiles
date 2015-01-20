@@ -43,3 +43,5 @@ function autocommit() {
   git commit --file=/tmp/gitsm
   rm -f /tmp/gitsm
 }
+
+alias agp='autocommit && gp'
