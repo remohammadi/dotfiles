@@ -15,7 +15,7 @@ alias gpo='git push origin'
 alias gcam='git commit -a -m'
 alias gaa='git add -u'
 alias gcaa='git commit -a --amend'
-
+alias gh='git hist'
 function git-reset-hard-head() {
   git stash && git reset --hard HEAD && echo "Changes stashed and reset hard to HEAD"
 }
