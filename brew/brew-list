@@ -49,6 +49,7 @@ openssl
 passenger
 pcre
 pkg-config
+pstree
 pyenv
 python
 rbenv
