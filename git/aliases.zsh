@@ -10,7 +10,6 @@ alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
            perl -pe 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
 alias grom='git reset --hard origin/master'
-alias gpom='git pull origin master'
 alias gpo='git push origin'
 alias gcam='git commit -a -m'
 alias gaa='git add -u'
@@ -52,6 +51,12 @@ function gitsquash() {
     git reset --soft HEAD~$1 &&
     git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"
   fi
+}
+
+function gpom() {
+  branch=`git rev-parse --abbrev-ref HEAD`
+  git push origin "${branch}":master
+  unset branch
 }
 
 if [[ -e /Users/ankushagarwal/.pyenv/shims/cdiff ]]; then
