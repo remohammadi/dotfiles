@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 status=`boot2docker status`
 if [[ $status == "running" ]]; then
   docker ps -q | xargs --no-run-if-empty docker stop
@@ -9,15 +10,16 @@ then
   exit 1
 fi
 echo "Restarted boot2docker"
+sleep 2
 boot2docker ssh sudo sh /Users/ankushagarwal/.dotfiles/bin/inithosts
-sleep 15
-i=0
-while ! docker start registry; do
-  sleep 5
-  ((i++))
-  if [[ $i -gt 3 ]]; then
-    break
-  fi
-done
-sleep 5
-docker start registry
+# sleep 15
+# i=0
+# while ! docker start registry; do
+#   sleep 5
+#   ((i++))
+#   if [[ $i -gt 3 ]]; then
+#     break
+#   fi
+# done
+# sleep 5
+# docker start registry
