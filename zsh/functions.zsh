@@ -45,3 +45,12 @@ function autocommit() {
 }
 
 alias agp='autocommit && gp'
+
+
+function s() {
+  if [[ -z $1 ]]; then
+    subl "$PWD"
+  else
+    subl "$1"
+  fi
+}
