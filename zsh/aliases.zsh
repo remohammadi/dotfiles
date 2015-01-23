@@ -33,3 +33,5 @@ alias updatedb="/usr/libexec/locate.updatedb"
 
 alias dott="cd ${HOME}/.dotfiles"
 alias intellij-idea="'/Applications/IntelliJ IDEA 14 CE.app/Contents/MacOS/idea'"
+
+alias hosts='sudo vim /etc/hosts'
