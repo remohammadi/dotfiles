@@ -31,7 +31,22 @@ function gitrebase() {
 unalias gp
 function gp() {
   branch=`git rev-parse --abbrev-ref HEAD`
-  git push $1 origin $branch
+  if [[ -z $1 ]]; then
+    remote=origin
+  else
+    remote=$1
+  fi
+  git push $remote $branch:$branch
+}
+
+function gpf() {
+  branch=`git rev-parse --abbrev-ref HEAD`
+  if [[ -z $1 ]]; then
+    remote=origin
+  else
+    remote=$1
+  fi
+  git push -f $remote $branch:$branch
 }
 
 function gitdelete() {
