@@ -1,0 +1,6 @@
+#!/bin/bash
+pwd=$PWD
+for file in `find /Users/ankushagarwal/git/addepar -iname .git -type d`; do cd $file/..; git config --local user.email "ankush.agarwal@addepar.com"; echo "Done $PWD"; done
+cd $pwd
+unset pwd
+unset file
