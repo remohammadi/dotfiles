@@ -69,6 +69,7 @@ rocksdb
 ruby
 snappy
 sqlite
+terminal-notifier
 thrift
 tree
 vim
