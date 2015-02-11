@@ -39,7 +39,7 @@ if [[ `uname -s` == "Darwin" ]]; then
 
   # initialize autocomplete here, otherwise functions won't be loaded
   autoload -U compinit
-  compinit
+  compinit -u
 
   # load every completion after autocomplete loads
   for file in ${(M)config_files:#*/completion.zsh}
@@ -62,7 +62,7 @@ else
 
   # initialize autocomplete here, otherwise functions won't be loaded
   autoload -U compinit
-  compinit
+  compinit -u
 
   # load every completion after autocomplete loads
   for file in ${${(M)config_files:#*/completion.zsh}:#*/*osx.zsh}
@@ -75,7 +75,7 @@ fi
 unset config_files
 ## Completions
 autoload -U compinit
-compinit -C
+compinit -u -C
 
 ## case-insensitive (all),partial-word and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
