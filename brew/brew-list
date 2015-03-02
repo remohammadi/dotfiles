@@ -48,6 +48,7 @@ libyaml
 little-cms2
 lz4
 macvim
+maven
 mercurial
 mpfr
 mysql
@@ -72,7 +73,6 @@ sqlite
 terminal-notifier
 thrift
 tree
-vim
 wget
 x264
 xvid
