@@ -10,8 +10,8 @@ then
   exit 1
 fi
 echo "Restarted boot2docker"
-sleep 2
-boot2docker ssh sudo sh /Users/ankushagarwal/.dotfiles/bin/inithosts
+#sleep 2
+#boot2docker ssh sudo sh /Users/ankushagarwal/.dotfiles/bin/inithosts
 # sleep 15
 # i=0
 # while ! docker start registry; do

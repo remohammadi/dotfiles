@@ -1,2 +1,2 @@
 #!/bin/sh
-echo '127.0.0.1 docker.addepar.com' >> /etc/hosts
+#echo '127.0.0.1 docker.addepar.com' >> /etc/hosts
