@@ -68,6 +68,29 @@ function gitsquash() {
   fi
 }
 
+function gitmerge() {
+  branch=`git rev-parse --abbrev-ref HEAD`
+  echo -n "Are you sure you want to merge ${branch} ? "
+  read confirm
+  if [ "$confirm" = "yes" ]; then
+    git fetch --all && \
+     git checkout ${branch} && \
+     git rebase origin/master && \
+     git push --force origin ${branch}:${branch} && \
+     git checkout master && \
+     git reset --hard origin/master && \
+     git merge ${branch} && \
+     git push origin ${branch}:${branch}
+     echo -n "Do you want to delete the branch : ${branch} ? "
+     read confirm
+     if [ "$confirm" = "yes" ]; then
+       git branch -D ${branch} && \
+       git branch -Dr origin/${branch}
+       git push origin --delete ${branch}
+     fi
+  fi
+}
+
 function gpom() {
   branch=`git rev-parse --abbrev-ref HEAD`
   git push origin "${branch}":master
