@@ -97,7 +97,7 @@ function gitmerge() {
     git push --force origin ${branch}:${branch} && echo "Force pushed ${branch}" && \
     git checkout master && echo "Checked out master" && \
     git reset --hard origin/master && echo "Reset master to origin/master" && \
-    git merge ${branch} && echo "Merged ${branch} into master" && \
+    git merge --ff-only ${branch} && echo "Merged ${branch} into master" && \
     git push origin master:master && echo "Pushed master to origin"
     echo -n "Do you want to delete the branch : ${branch} ? "
     read confirm
