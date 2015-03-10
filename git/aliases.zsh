@@ -69,25 +69,43 @@ function gitsquash() {
 }
 
 function gitmerge() {
+  git fetch origin master
+  commit_count=`git rev-list origin/master..HEAD --count`
   branch=`git rev-parse --abbrev-ref HEAD`
+  echo
+  echo "You are on branch '${branch}'\n"
+  if [[ ${commit_count} -gt 1 ]]; then
+    echo "You are ${commit_count} commits ahead of origin/master\n"
+    echo -n "Do you want squash your ${commit_count} commits ? "
+    read confirm
+    if [ "$confirm" = "yes" ]; then
+      git reset --soft HEAD~${commit_count} &&
+      git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"
+    else
+      return
+    fi
+  elif [[ ${commit_count} -eq 1 ]]; then
+    echo "You are ${commit_count} commit ahead of origin/master\n"
+  elif [[ ${commit_count} -eq 0 ]]; then
+    echo "You are ${commit_count} commits ahead of origin/master\n"
+    return
+  fi
   echo -n "Are you sure you want to merge ${branch} ? "
   read confirm
   if [ "$confirm" = "yes" ]; then
-    git fetch --all && \
-     git checkout ${branch} && \
-     git rebase origin/master && \
-     git push --force origin ${branch}:${branch} && \
-     git checkout master && \
-     git reset --hard origin/master && \
-     git merge ${branch} && \
-     git push origin ${branch}:${branch}
-     echo -n "Do you want to delete the branch : ${branch} ? "
-     read confirm
-     if [ "$confirm" = "yes" ]; then
-       git branch -D ${branch} && \
-       git branch -Dr origin/${branch}
-       git push origin --delete ${branch}
-     fi
+    git rebase origin/master && echo "Rebased the branch from origin/master" && \
+    git push --force origin ${branch}:${branch} && echo "Force pushed ${branch}" && \
+    git checkout master && echo "Checked out master" && \
+    git reset --hard origin/master && echo "Reset master to origin/master" && \
+    git merge ${branch} && echo "Merged ${branch} into master" && \
+    git push origin master:master && echo "Pushed master to origin"
+    echo -n "Do you want to delete the branch : ${branch} ? "
+    read confirm
+    if [ "$confirm" = "yes" ]; then
+      git branch -D ${branch} && \
+      git branch -Dr origin/${branch} && \
+      git push origin :${branch}
+    fi
   fi
 }
 
