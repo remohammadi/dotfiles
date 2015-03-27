@@ -58,6 +58,11 @@ function gitdelete() {
   if [[ -z $1 ]]; then
     echo "Please enter the name of branch to delete"
   else
+    echo -n "Do you want to delete the remote(origin) branch? : "
+    read confirm
+    if [ "$confirm" = "yes" ]; then
+      git push origin --delete $1
+    fi
     git branch -D $1
     git branch -Dr origin/$1
   fi
