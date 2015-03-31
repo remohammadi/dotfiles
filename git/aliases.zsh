@@ -43,7 +43,7 @@ function gp() {
   else
     remote=$1
   fi
-  git push $remote $branch:$branch
+  git push -u $remote $branch:$branch
 }
 
 function gpf() {
