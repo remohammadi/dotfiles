@@ -53,7 +53,7 @@ function gpf() {
   else
     remote=$1
   fi
-  git push -f $remote $branch:$branch
+  git push -uf $remote $branch:$branch
 }
 
 function gitdelete() {
