@@ -1,5 +1,14 @@
 #!/bin/bash
 echo "The following VMs are running"
 vboxmanage list runningvms
-echo "Bringing them down"
-vboxmanage list runningvms | /usr/bin/sed -E 's/.*\{(.*)\}/\1/' | xargs -L1 -I {} VBoxManage controlvm {} savestate
+echo "Do you want to bring them down? "
+read confirm
+if [ "$confirm" = "yes" ]; then
+  echo "Bringing them down"
+  vboxmanage list runningvms | /usr/bin/sed -E 's/.*\{(.*)\}/\1/' | xargs -L1 -I {} VBoxManage controlvm {} savestate
+else
+  echo "Okay, bye then"
+fi
+
+
+
