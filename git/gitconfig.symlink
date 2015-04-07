@@ -4,6 +4,7 @@
 [credential]
         helper = osxkeychain
 [alias]
+        gerp = grep
         promote = !$ZSH/bin/git-promote
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
