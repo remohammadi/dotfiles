@@ -49,8 +49,8 @@ alias agp='autocommit && gp'
 
 function s() {
   if [[ -z $1 ]]; then
-    subl "$PWD"
+    subl --new "$PWD"
   else
-    subl "$1"
+    subl --new "$1"
   fi
 }
