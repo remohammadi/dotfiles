@@ -127,6 +127,19 @@ function gpom() {
   unset branch
 }
 
+function gitcontains() {
+  if [[ -z $1 ]]; then
+    echo "Check if your commit is deployed"
+    echo "gitcontains <my-commit> <deployed-commit>"
+  else
+    if git merge-base --is-ancestor $1 $2; then
+      echo "YES"
+    else
+      echo "NO"
+    fi
+  fi
+}
+
 if [[ -e /Users/ankushagarwal/.pyenv/shims/cdiff ]]; then
   alias gd='/Users/ankushagarwal/.pyenv/shims/cdiff -s'
   alias gdc='/Users/ankushagarwal/.pyenv/shims/cdiff -s --cached'
