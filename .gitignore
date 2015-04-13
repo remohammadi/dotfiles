@@ -1,7 +1,6 @@
 zsh/local.zsh
 history/.git/
 history/history*
-bin/addepar
 docker/host.zsh
 *.DS_Store
 
