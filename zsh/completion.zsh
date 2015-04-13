@@ -31,14 +31,5 @@ export PYENV_ROOT=/usr/local/opt/pyenv
 alias d=docker
 
 # Set these nice options at last
-set +o extended_history
-set +o histignorespace
-set +o histverify
-export HISTFILE=$HOME/.history_directory/history_local
-set -o APPEND_HISTORY
-export HISTSIZE=50000
-export SAVEHIST=50000
-set -o HIST_EXPIRE_DUPS_FIRST
-set +o extendedhistory
-set -o INC_APPEND_HISTORY
 
+source ${0:a:h}/history_options

@@ -1,0 +1,11 @@
+setopt extended_history
+setopt histignorespace
+setopt histverify
+export HISTFILE=$HOME/.history_directory/history_local
+setopt APPEND_HISTORY
+export HISTSIZE=50000
+export SAVEHIST=50000
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt extendedhistory
+setopt INC_APPEND_HISTORY
+setopt hist_ignore_all_dups
