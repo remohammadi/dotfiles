@@ -1,8 +1,7 @@
-export histfile=$HOME/.history_directory/history_local
+export HISTFILE=$HOME/.history_directory/history_local
 export HISTSIZE=50000
 export SAVEHIST=50000
 setopt append_history
-setopt extendedhistory
 setopt hist_expire_dups_first
 setopt hist_ignore_all_dups
 setopt histignorespace
