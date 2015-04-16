@@ -50,5 +50,14 @@ function di () {
     docker images | grep -v '<none> *<none>' | grep "$1"
   fi
 }
+
+function dstoprm () {
+  if [[ "$1" == "" ]]; then
+    echo "dstoprm container-name"
+  else
+    docker stop $1; docker rm $1;
+  fi
+}
+
 alias bd=boot2docker
 alias db='docker build'
