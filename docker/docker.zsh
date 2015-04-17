@@ -55,7 +55,7 @@ function dstoprm () {
   if [[ "$1" == "" ]]; then
     echo "dstoprm container-name"
   else
-    docker stop $1; docker rm $1;
+    docker stop -t 1 $1; docker rm $1;
   fi
 }
 
