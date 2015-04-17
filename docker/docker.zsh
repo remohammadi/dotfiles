@@ -51,9 +51,9 @@ function di () {
   fi
 }
 
-function dstoprm () {
+function drm () {
   if [[ "$1" == "" ]]; then
-    echo "dstoprm container-name"
+    echo "drm container-name"
   else
     docker stop -t 1 $1; docker rm $1;
   fi
