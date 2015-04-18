@@ -34,3 +34,5 @@ alias dott="cd ${HOME}/.dotfiles"
 alias intellij-idea="'/Applications/IntelliJ IDEA 14 CE.app/Contents/MacOS/idea'"
 
 alias hosts='sudo vim /etc/hosts'
+
+alias idea='intellij-idea $PWD'

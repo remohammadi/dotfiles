@@ -17,10 +17,14 @@ alias gcaa='git commit -a --amend'
 alias gh='git hist'
 alias hubb='hub browse'
 alias hubc='hub compare'
-function git-reset-hard-head() {
-  git stash && git reset --hard HEAD && echo "Changes stashed and reset hard to HEAD"
+
+function grhh() {
+  if [[ -z $1 ]]; then
+    git reset --hard HEAD
+  else
+    git stash && git reset --hard HEAD && echo "Changes stashed and reset hard to HEAD"
+  fi
 }
-alias grhh='git-reset-hard-head'
 
 alias gd='git d'
 alias gdc='git d --cached'

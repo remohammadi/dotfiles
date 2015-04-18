@@ -3,6 +3,6 @@ history/.git/
 history/history*
 docker/host.zsh
 *.DS_Store
-
+.idea/
 #Sublime Shit
 st3
