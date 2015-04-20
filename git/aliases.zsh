@@ -10,7 +10,6 @@ alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
            perl -pe 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
 alias grom='git reset --hard origin/master'
-alias gpo='git push origin'
 alias gcam='git commit -a -m'
 alias gaa='git add -u'
 alias gcaa='git commit -a --amend'
@@ -30,6 +29,14 @@ alias gd='git d'
 alias gdc='git d --cached'
 
 alias gfa='git fetch --all && git fetch --tags'
+function gp() {
+  if [[ -z $1 ]]; then
+    remote=origin
+  else
+    remote=$1
+  fi
+  git pull ${remote}
+}
 function gitrebase() {
   if [[ -z $1 ]]; then
     remote=origin
