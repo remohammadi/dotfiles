@@ -54,3 +54,11 @@ function s() {
     subl --new "$1"
   fi
 }
+
+function grepr() {
+  if [[ -z $1 ]]; then
+    echo "grepr <search-term>"
+  else
+    grep -R "$1" .
+  fi
+}
