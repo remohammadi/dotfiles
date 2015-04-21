@@ -92,6 +92,10 @@ function gitsquash() {
 }
 
 function gitmerge() {
+  if [[ $1 ]]; then
+    echo "Checking out $1"
+    git checkout $1
+  fi
   git fetch origin master
   commit_count=`git rev-list origin/master..HEAD --count`
   branch=`git rev-parse --abbrev-ref HEAD`
