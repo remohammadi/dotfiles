@@ -87,7 +87,7 @@ function gitsquash() {
   else
     count=$1
   fi
-  echo "Squash $count commits?"
+  echo -n "Squash $count commits? "
   read confirm
   if [ "$confirm" = "yes" ]; then
     git reset --soft HEAD~$count &&
