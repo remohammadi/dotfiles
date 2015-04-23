@@ -90,8 +90,8 @@ function gitsquash() {
   echo -n "Squash $count commits? "
   read confirm
   if [ "$confirm" = "yes" ]; then
-    git reset --soft HEAD~$count &&
-    git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{count})"
+    git reset --soft HEAD~${count} &&
+    git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{${count}})"
   else
     echo "Ok, bye"
   fi
