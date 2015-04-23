@@ -82,13 +82,18 @@ function gitdelete() {
 }
 
 function gitsquash() {
-  echo "Latest commit id is `git rev-parse HEAD`"
   if [[ -z $1 ]]; then
-    echo "Please enter the number of commits to squash"
+    count=`git rev-list master.. --count`
   else
-    git reset --soft HEAD~$1 &&
-    git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"
+    count=$1
   fi
+  echo "Squash $count commits?"
+  read confirm
+  if [ "$confirm" = "yes" ]; then
+    git reset --soft HEAD~$count &&
+    git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{count})"
+  fi
+
 }
 
 function gitmerge() {
