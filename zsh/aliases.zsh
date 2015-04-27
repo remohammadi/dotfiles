@@ -36,3 +36,5 @@ alias intellij-idea="'/Applications/IntelliJ IDEA 14 CE.app/Contents/MacOS/idea'
 alias hosts='vim /etc/hosts'
 
 alias idea='intellij-idea $PWD'
+
+alias vms='vboxmanage list runningvms'
