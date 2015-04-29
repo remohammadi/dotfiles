@@ -55,7 +55,7 @@ function drm () {
   if [[ "$1" == "" ]]; then
     echo "drm container-name"
   else
-    docker stop -t 1 $1 $2 $3 $4 $5; docker rm $1 $2 $3 $4 $5;
+    docker stop -t 1 $1 $2 $3 $4 $5 $6 $7 $8 $9 $10; docker rm $1 $2 $3 $4 $5 $6 $7 $8 $9 $10;
   fi
 }
 
