@@ -17,6 +17,7 @@
         type = cat-file -t
         dump = cat-file -p
         d = diff --ignore-space-at-eol -b -w --word-diff=color
+        difff = diff --ignore-space-at-eol -b -w --word-diff=color origin/master...HEAD
         g = grep --break --heading --line-number -e
         showw = show --stat --oneline
         b = branch

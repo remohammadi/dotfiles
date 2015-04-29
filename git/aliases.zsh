@@ -26,6 +26,7 @@ function grhh() {
 }
 
 alias gd='git d'
+alias gdd='git difff'
 alias gdc='git d --cached'
 
 alias gfa='git fetch --all && git fetch --tags'
@@ -91,7 +92,7 @@ function gitsquash() {
   read confirm
   if [ "$confirm" = "yes" ]; then
     git reset --soft HEAD~${count} &&
-    git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{${count}})"
+    git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"
   else
     echo "Ok, bye"
   fi
