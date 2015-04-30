@@ -84,7 +84,7 @@ function gitdelete() {
 
 function gitsquash() {
   if [[ -z $1 ]]; then
-    count=`git rev-list master.. --count`
+    count=`git rev-list origin/master.. --count`
   else
     count=$1
   fi

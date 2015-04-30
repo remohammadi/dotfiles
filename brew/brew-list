@@ -9,7 +9,6 @@ cloog
 cmake
 cowsay
 cscope
-curl
 docker
 duck
 emacs
