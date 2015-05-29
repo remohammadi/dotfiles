@@ -1,4 +1,5 @@
 ack
+ant
 autoconf
 autojump
 bash
@@ -39,6 +40,7 @@ imagemagick
 isl
 jbig2dec
 jpeg
+jq
 keybase
 lame
 libmpc
@@ -76,6 +78,7 @@ sqlite
 terminal-notifier
 thrift
 tree
+watchman
 wget
 x264
 xvid
