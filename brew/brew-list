@@ -68,6 +68,7 @@ pcre
 pkg-config
 pstree
 pyenv
+pyenv-virtualenv
 python
 rbenv
 readline

@@ -20,6 +20,7 @@ function de() {
 }
 
 alias dps='docker ps'
+alias dpsa='docker ps -a'
 
 function ds () {
   docker ps | grep -v 'CONTAINER' | head -1 | awk '{print $1}' | xargs --no-run-if-empty docker stop
