@@ -4,6 +4,7 @@ appcleaner
 atom
 cloud
 consul
+consul-template
 controlplane
 cyberduck
 dash
@@ -12,6 +13,7 @@ firefox
 flashlight
 flux
 gimp
+gitup
 growlnotify
 hex-fiend
 hyperswitch
@@ -26,6 +28,7 @@ mactex
 macvim
 nosleep
 private-internet-access
+real-vnc
 scroll-reverser
 sequel-pro
 sizeup

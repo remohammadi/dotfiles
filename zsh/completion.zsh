@@ -10,14 +10,14 @@ zstyle ':completion:*' insert-tab pending
 setopt prompt_subst
 if [[ -n $SSH_CONNECTION ]]; then
   export PROMPT='[%{$fg[green]%}'"$USER"'%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)]
-$ '
+🐳  '
 else
   if [[ $USER == "ankushagarwal" ]]; then
       export PROMPT='[%{$fg[red]%}ankush%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)]
-$ '
+🐳  '
   else
       export PROMPT='[%{$fg[red]%}${USER}%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)]
-$ '
+🐳  '
   fi
 fi
 
